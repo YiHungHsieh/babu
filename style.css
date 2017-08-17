@@ -17,7 +17,7 @@ body{
 	border: solid 5px;
 	border-radius: 5px;
 	margin-left:13px;
-	margin-top:420px;
+	margin-top:30%;
 }
 p{
 	font-size: 30px;
@@ -30,3 +30,12 @@ p{
 	font-size: 10px;
 	color:#ffc600;
 }
+.effect{
+	transform:scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 1px #ffc600;
+
+}
+
+
+
