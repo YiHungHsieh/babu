@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="bar">
+		<div class="block" data-push="65"><audio data-push="65" src="sounds/clap.wav"></audio>
+			<p id="A">A</p>
+			<p class="bottom">CLAP</p>
+		</div>
+		<div class="block" data-push="83"><audio data-push="83" src="sounds/hihat.wav"></audio>
+			<p id="S">S</p>
+			<p class="bottom">HIHAT</p>
+		</div>
+		<div class="block" data-push="68"><audio data-push="68" src="sounds/kick.wav"></audio>
+			<p id="D">D</p>
+			<p class="bottom">KICK</p>
+		</div>
+		<div class="block" data-push="70"><audio data-push="70" src="sounds/openhat.wav"></audio>
+			<p id="F">F</p>
+			<p class="bottom">OPENHAT</p>
+		</div>
+		<div class="block" data-push="71"><audio data-push="71" src="sounds/boom.wav"></audio>
+			<p id="G">G</p>
+			<p class="bottom">BOOM</p>
+		</div>
+		<div class="block" data-push="72"><audio data-push="72" src="sounds/ride.wav"></audio>
+			<p id="H">H</p>
+			<p class="bottom">RIDE</p>
+		</div>
+		<div class="block" data-push="74"><audio data-push="74" src="sounds/snare.wav"></audio>
+			<p id="J">J</p>
+			<p class="bottom">SNARE</p>
+		</div>
+		<div class="block" data-push="75"><audio data-push="75" src="sounds/tom.wav"></audio>
+			<p id="K">K</p>
+			<p class="bottom">TOM</p>
+		</div>
+		<div class="block" data-push="76"><audio data-push="76" src="sounds/tink.wav"></audio>
+			<p id="L">L</p>
+			<p class="bottom">TINK</p>
+		</div>
+	</div>
+
+
+<script>
+
+//  選擇鍵盤按鍵所對應到的網頁元素,要監聽事件的話會用到addEventListener，為了要監聽使用者按了那個按鍵
+window.addEventListener('keydown', function(push){
+    const audio = document.querySelector(`audio[data-push="${push.keyCode}"]`);
+    const block = document.querySelector(`.block[data-push="${push.keyCode}"]`);
+  	if(!audio) return;  //  沒有按到對應的按鍵，則停止此函式
+    audio.play();     //.play()播放音效元素
+
+  });
+	
+
+</script>
+
+
+</body>
+</html>
