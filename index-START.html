@@ -60,6 +60,13 @@ window.addEventListener('keydown', function(push){
 
   });
 
+window.addEventListener('keyup', function(push){
+	const audio = document.querySelector(`audio[data-push="${push.keyCode}"]`);
+    const block = document.querySelector(`.block[data-push="${push.keyCode}"]`);
+	block.classList.remove('effect'); //上面找到對應位置,這行移除keydown新增的class
+
+  });
+
 	
 
 </script>
