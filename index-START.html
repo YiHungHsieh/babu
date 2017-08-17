@@ -52,6 +52,7 @@
 //  選擇鍵盤按鍵所對應到的網頁元素,要監聽事件的話會用到addEventListener，為了要監聽使用者按了那個按鍵
 window.addEventListener('keydown', function(push){
     const audio = document.querySelector(`audio[data-push="${push.keyCode}"]`);
+    //用${ }，來代入變數
     const block = document.querySelector(`.block[data-push="${push.keyCode}"]`);
   	if(!audio) return;  //  沒有按到對應的按鍵，則停止此函式
   	audio.currentTime = 0;  //  讓每次回到音效檔的起始點
